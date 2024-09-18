@@ -1,0 +1,120 @@
+
+
+/* Estilos generales */
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f0f8ff; 
+}
+
+/* Encabezado */
+.header {
+    grid-area: header;
+    background-color:  #ff69b4e3; 
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 3px solid #ffffff; /* Borde inferior blanco */
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2.5em; 
+}
+
+.header .subtitle {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+/* Área principal (main) */
+main {
+    grid-area: main;
+    padding: 20px;
+}
+
+/* Secciones de contenido */
+.about-me, .projects, .contact {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Estilos para las secciones */
+.about-me {
+    background-color: #e0ffff; /* Color celeste */
+    border-radius: 10px;
+    margin: 20px;
+}
+.description {
+    text-align: justify;
+    text-indent: 0%;
+
+}
+
+.projects {
+    background-color: #f5f5f5; /* Color gris claro */
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.contact {
+    background-color: #f0e6f6; /* Color violeta claro */
+    border-radius: 10px;
+    margin: 20px;
+}
+
+/* Pie de página */
+.footer {
+    grid-area: footer;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Grid específico para la sección de proyectos */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.project {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px; /* Bordes redondeados */
+    background-color: #ffffff; /* Fondo blanco para los proyectos */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra ligera */
+}
+
+.project img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Bordes redondeados en las imágenes */
+}
+
+/* Enlaces */
+a {
+    color: #ff69b4; /* Color rosa para los enlaces */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries para la responsividad */
+@media (max-width: 768px) {
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+}
